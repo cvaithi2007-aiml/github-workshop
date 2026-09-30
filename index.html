@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vaitheeshwari C | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#080b18;
+    color:#fff;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(8,11,24,0.9);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#7c5cff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:#7c5cff;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:100px 20px;
+    background:
+    radial-gradient(circle at top,#25205c 0%,#080b18 45%);
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.hero h1 span{
+    color:#8b6cff;
+}
+
+.hero h3{
+    color:#b9b9c9;
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.hero p{
+    max-width:650px;
+    margin:auto;
+    color:#aaa;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:13px 25px;
+    border-radius:30px;
+    background:#7c5cff;
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 25px #7c5cff;
+}
+
+/* SECTIONS */
+section{
+    padding:90px 9%;
+}
+
+.title{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:45px;
+}
+
+.title span{
+    color:#7c5cff;
+}
+
+/* ABOUT */
+.about{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    color:#bcbcbc;
+    line-height:1.9;
+    font-size:17px;
+}
+
+/* SKILLS */
+.skills{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.skill{
+    padding:15px 25px;
+    border:1px solid #29254b;
+    border-radius:15px;
+    background:#11152a;
+    transition:0.3s;
+}
+
+.skill:hover{
+    transform:translateY(-7px);
+    border-color:#7c5cff;
+    box-shadow:0 0 20px #28204f;
+}
+
+/* PROJECTS */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.card{
+    padding:28px;
+    background:#11152a;
+    border:1px solid #242744;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#7c5cff;
+}
+
+.card h3{
+    color:#9b86ff;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#aaa;
+    line-height:1.7;
+}
+
+/* EDUCATION */
+.timeline{
+    max-width:750px;
+    margin:auto;
+}
+
+.edu{
+    background:#11152a;
+    padding:25px;
+    margin:20px 0;
+    border-left:4px solid #7c5cff;
+    border-radius:10px;
+}
+
+.edu h3{
+    color:#9b86ff;
+    margin-bottom:8px;
+}
+
+.edu p{
+    color:#aaa;
+}
+
+/* ACHIEVEMENTS */
+.achievements{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.achievement{
+    text-align:center;
+    padding:25px;
+    background:#11152a;
+    border-radius:18px;
+}
+
+.achievement .icon{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    color:#aaa;
+    margin:12px;
+}
+
+.social{
+    margin-top:25px;
+}
+
+.social a{
+    display:inline-block;
+    margin:8px;
+    padding:12px 20px;
+    border:1px solid #7c5cff;
+    border-radius:25px;
+    color:white;
+    text-decoration:none;
+}
+
+.social a:hover{
+    background:#7c5cff;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    background:#050711;
+    color:#777;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    nav{
+        padding:15px 5%;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero h3{
+        font-size:18px;
+    }
+
+    section{
+        padding:70px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">VC.</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+    <div>
+
+        <h1>Hello, I'm <span>Vaitheeshwari C</span></h1>
+
+        <h3>B.E. Engineering Student | Aspiring Developer</h3>
+
+        <p>
+            Passionate about technology, innovation and problem solving.
+            I enjoy creating meaningful projects that can solve real-world problems.
+        </p>
+
+        <a href="#projects" class="btn">Explore My Work →</a>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+    <h2 class="title">About <span>Me</span></h2>
+
+    <div class="about">
+
+        <p>
+            I am a B.E. engineering student with an interest in programming,
+            technology and innovative ideas. I enjoy learning new technologies,
+            participating in project-based activities and developing solutions
+            for real-world problems.
+        </p>
+
+        <br>
+
+        <p>
+            My goal is to continuously improve my technical skills,
+            communication skills and problem-solving abilities while building
+            a successful career in the technology field.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills">
+
+    <h2 class="title">My <span>Skills</span></h2>
+
+    <div class="skills">
+
+        <div class="skill">C Programming</div>
+        <div class="skill">Python</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">DBMS</div>
+        <div class="skill">Data Science</div>
+        <div class="skill">Problem Solving</div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+
+    <h2 class="title">Featured <span>Projects</span></h2>
+
+    <div class="projects">
+
+        <div class="card">
+            <h3>📱 Unused Mobile Data Saving</h3>
+
+            <p>
+                A proposed telecom-integrated feature that saves unused
+                daily mobile data and allows users to use the saved data
+                later within the validity period.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <h3>🔥 Forest Fire Detection</h3>
+
+            <p>
+                Satellite tower based early forest fire detection and
+                alert system designed to identify fires early and send
+                alerts to the nearby forest office.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <h3>🎓 Academic Risk Detection</h3>
+
+            <p>
+                A smart student-support system that analyses academic
+                information and helps identify students who may require
+                additional guidance.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <h3>🌱 AI Crop Guidance</h3>
+
+            <p>
+                An AI-based agricultural solution that provides farmers
+                with crop, weather, disease and farming guidance.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+<section id="education">
+
+    <h2 class="title">My <span>Education</span></h2>
+
+    <div class="timeline">
+
+        <div class="edu">
+            <h3>B.E. Engineering</h3>
+
+            <p>
+                Sri Sairam Engineering College
+            </p>
+
+            <p>
+                Currently Pursuing
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ACHIEVEMENTS -->
+<section>
+
+    <h2 class="title">Achievements & <span>Interests</span></h2>
+
+    <div class="achievements">
+
+        <div class="achievement">
+            <div class="icon">💡</div>
+            <h3>Innovation</h3>
+            <p>Interested in developing innovative ideas.</p>
+        </div>
+
+        <div class="achievement">
+            <div class="icon">🚀</div>
+            <h3>Projects</h3>
+            <p>Enjoy working on real-world projects.</p>
+        </div>
+
+        <div class="achievement">
+            <div class="icon">📚</div>
+            <h3>Learning</h3>
+            <p>Always interested in learning new technologies.</p>
+        </div>
+
+        <div class="achievement">
+            <div class="icon">🌍</div>
+            <h3>SDG & Social Impact</h3>
+            <p>Interested in technology-based social solutions.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <h2 class="title">Let's <span>Connect</span></h2>
+
+    <div class="contact">
+
+        <p>📧 Email: yourmail@gmail.com</p>
+
+        <p>📱 Phone: +91 XXXXX XXXXX</p>
+
+        <div class="social">
+
+            <a href="#" target="_blank">LinkedIn</a>
+
+            <a href="#" target="_blank">GitHub</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © <span id="year"></span> Vaitheeshwari C | Designed & Built with ❤️
+    </p>
+
+</footer>
+
+
+<script>
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
